@@ -1,0 +1,6 @@
+{
+  "name": "Jimpoulakos.GitHub.io",
+  "tagline": "",
+  "body": "# Terraform Pitfalls\r\n\r\nTerraform, as a tool, is pretty darn good at helping you provision code in a format that is easy to understand, easy to maintain, and lets you get back to doing what you want to do: code.\r\n\r\n#### Oops, I Now Have a $50,000 Amazon Bill\r\n\r\nDon't put your AWS access and secret keys in your repositories. I cannot stress this enough. Public, private, does not matter. Don't put them there.\r\n\r\nWhat's nice about Terraform, is that when combined with the AWS CLI SDK, you can easily configure your system without having to worry about accidentally uploading your private information onto the web.\r\n\r\nFor instance, most of the time you start with this:\r\n\r\n```\r\nprovider \"aws\" {\r\n    access_key = \"YOUR_ACCESS_KEY\"\r\n    secret_key = \"YOUR_SECRET_KEY\"\r\n    region = \"us-east-1\"\r\n}\r\n```\r\n\r\nWhen you inevitably upload this file (and you will, trust me), you will likely find yourself on the wrong end of Amazon Billing trying to resolve what exactly just happened.\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}

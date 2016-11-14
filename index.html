@@ -1,10 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Blog - Jim Poulakos</title>
-</head>
-<body>
-    Welcome to my (albeit boring) blog. Or something.
-</body>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Jimpoulakos.GitHub.io : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Jimpoulakos.GitHub.io</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/jimpoulakos">View on GitHub</a>
+
+          <h1 id="project_title">Jimpoulakos.GitHub.io</h1>
+          <h2 id="project_tagline"></h2>
+
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="terraform-pitfalls" class="anchor" href="#terraform-pitfalls" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Terraform Pitfalls</h1>
+
+<p>Terraform, as a tool, is pretty darn good at helping you provision code in a format that is easy to understand, easy to maintain, and lets you get back to doing what you want to do: code.</p>
+
+<h4>
+<a id="oops-i-now-have-a-50000-amazon-bill" class="anchor" href="#oops-i-now-have-a-50000-amazon-bill" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Oops, I Now Have a $50,000 Amazon Bill</h4>
+
+<p>Don't put your AWS access and secret keys in your repositories. I cannot stress this enough. Public, private, does not matter. Don't put them there.</p>
+
+<p>What's nice about Terraform, is that when combined with the AWS CLI SDK, you can easily configure your system without having to worry about accidentally uploading your private information onto the web.</p>
+
+<p>For instance, most of the time you start with this:</p>
+
+<pre><code>provider "aws" {
+    access_key = "YOUR_ACCESS_KEY"
+    secret_key = "YOUR_SECRET_KEY"
+    region = "us-east-1"
+}
+</code></pre>
+
+<p>When you inevitably upload this file (and you will, trust me), you will likely find yourself on the wrong end of Amazon Billing trying to resolve what exactly just happened.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
 </html>
